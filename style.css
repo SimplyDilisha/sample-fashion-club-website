@@ -282,6 +282,66 @@ main span img {
   border-radius: 8px;
 }
 
+/* HIGHLIGHT BOX FOR JOIN PAGE */
+.highlight-box {
+  background: linear-gradient(135deg, #faf8f5 0%, #f5f1ee 100%);
+  border-left: 5px solid var(--accent);
+  padding: 2.5rem;
+  border-radius: 8px;
+  margin: 2.5rem 0;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.1);
+  transition: all 0.4s ease;
+}
+
+.highlight-box:hover {
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+  transform: translateX(5px);
+}
+
+.highlight-box p {
+  margin-bottom: 1rem;
+  color: var(--light-text);
+  font-size: 1.1rem;
+}
+
+.highlight-box p strong {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* PAGE-SPECIFIC STYLES */
+main div[title="why-join"] {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f7f4 100%);
+  border-left: 5px solid var(--accent);
+}
+
+main div[title="join-section"] {
+  background: linear-gradient(135deg, #fefcf9 0%, #f5f1ee 100%);
+}
+
+main div[title="cta-section"] {
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+  text-align: center;
+  padding: 3rem 2.5rem !important;
+}
+
+main div[title="cta-section"] h2 {
+  margin-bottom: 1.5rem;
+}
+
+main div[title="cta-section"] p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--light-text);
+}
+
+main div[title="cta-section"] a {
+  margin-top: 1.5rem;
+  padding: 1rem 3.5rem;
+  font-size: 0.95rem;
+}
+
 /* FOOTER */
 footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
