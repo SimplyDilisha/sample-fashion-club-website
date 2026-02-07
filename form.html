@@ -3,41 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Join Our Club</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h2>Fill the form to register for the club</h2>
+        <h1>Join Fashion Club</h1>
+        <h5>Complete your membership application</h5>
     </header>
     <main>
-        <form action="/submit.php">
-            <div>
-                 <label for="name">Name</label>
-                 <input id="name" type="text" placeholder="Enter Name" required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Enter email" required>
+        <div class="form-container">
+            <h2>Membership Application</h2>
+            <p class="form-subtitle">Join our creative community and express your passion for fashion</p>
+            <form action="/submit.php" class="application-form">
+                <fieldset class="form-section">
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input id="name" type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input id="email" type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input id="phone" type="tel" placeholder="Enter your contact number" required>
+                    </div>
+                </fieldset>
 
-            </div>
-            <div>
-                <label for="phone">contact no.</label>
-                <input id="phone" type="tel" placeholder="Enter contact no." required>
+                <fieldset class="form-section">
+                    <legend>Department & Team Interest</legend>
+                    <div class="form-group">
+                        <p class="field-label">Which team interests you? *</p>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input id="evm" type="radio" name="team" value="Event Management" required>
+                                <label for="evm">Event Management</label>
+                            </div>
+                            <div class="radio-option">
+                                <input id="tech" type="radio" name="team" value="Tech">
+                                <label for="tech">Tech Team</label>
+                            </div>
+                            <div class="radio-option">
+                                <input id="fashion" type="radio" name="team" value="Fashion">
+                                <label for="fashion">Fashion Team</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
 
-            </div>
-          
-            <div>
-                <p>Team</p>
-                <label for="evm">evm</label>
-                <input id="evm" type="radio" name="evm" value="evm">
-
-                <label for="tech">Tech</label>
-                <input id="tech" type="radio" name="tech" value="tech">
-            </div>
-           
-
-        </form>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
     </main>
-    
+
+    <footer>
+        <div>
+            <h4>Questions?</h4>
+            <p>📧 Email: clubemail@college.edu</p>
+            <p>📷 Instagram: @fashionclubhandle</p>
+            <p>📍 College Name, City</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -387,6 +387,178 @@ footer p:hover {
   transition: color 0.3s ease;
 }
 
+/* FORM STYLES */
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 3.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--border);
+  animation: slideUp 0.8s ease;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.form-container h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: var(--light-text);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.form-section {
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fefcf9 0%, #f5f1ee 100%);
+  transition: all 0.4s ease;
+}
+
+.form-section:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.1);
+}
+
+.form-section legend {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--primary);
+  padding: 0 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label,
+.field-label {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  padding: 0.9rem 1.2rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  background: white;
+  transition: all 0.4s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  background: #fffbf5;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="tel"]::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.radio-option:hover {
+  background: #fffbf5;
+  border-color: var(--accent);
+}
+
+.radio-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 1rem;
+  accent-color: var(--accent);
+}
+
+.radio-option label {
+  cursor: pointer;
+  margin-bottom: 0;
+  color: var(--primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+.submit-btn {
+  padding: 1.2rem 3rem;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+  margin-top: 1rem;
+  align-self: center;
+  min-width: 280px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
 /* ANIMATIONS */
 @keyframes slideInDown {
   from {
@@ -427,6 +599,17 @@ footer p:hover {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -492,6 +675,19 @@ footer p:hover {
   main span {
     padding: 1.5rem;
   }
+
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .submit-btn {
+    min-width: 200px;
+    padding: 1rem 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -532,5 +728,31 @@ footer p:hover {
 
   footer p {
     font-size: 0.9rem;
+  }
+
+  .form-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-section {
+    padding: 1.2rem;
+  }
+
+  .form-section legend {
+    font-size: 1.2rem;
+  }
+
+  .radio-group {
+    gap: 0.8rem;
+  }
+
+  .radio-option {
+    padding: 0.8rem;
+  }
+
+  .submit-btn {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    min-width: 160px;
   }
 }
