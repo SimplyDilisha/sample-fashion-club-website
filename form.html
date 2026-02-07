@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <header>
+        <h2>Fill the form to register for the club</h2>
+    </header>
+    <main>
+        <form action="/submit.php">
+            <div>
+                 <label for="name">Name</label>
+                 <input id="name" type="text" placeholder="Enter Name" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter email" required>
+
+            </div>
+            <div>
+                <label for="phone">contact no.</label>
+                <input id="phone" type="tel" placeholder="Enter contact no." required>
+
+            </div>
+          
+            <div>
+                <p>Team</p>
+                <label for="evm">evm</label>
+                <input id="evm" type="radio" name="evm" value="evm">
+
+                <label for="tech">Tech</label>
+                <input id="tech" type="radio" name="tech" value="tech">
+            </div>
+           
+
+        </form>
+    </main>
+    
+</body>
+</html>

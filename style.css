@@ -1,0 +1,168 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --primary: #111;
+  --secondary: #f5f1ee;
+  --accent: #c19a6b;
+  --text: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1520975916090-3105956dac38") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  animation: fadeDown 1.2s ease;
+}
+
+header h5 {
+  font-weight: 300;
+  margin-top: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeUp 1.2s ease;
+}
+
+/* MAIN */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+main div {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+main div.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* HEADINGS */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+/* LIST */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+/* LINKS */
+a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.4s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.8rem;
+  }
+}
